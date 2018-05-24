@@ -6,3 +6,6 @@
 body #create-form {
   padding: 200px;
 }
+body label {
+  display: inherit;
+}

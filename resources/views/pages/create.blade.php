@@ -6,24 +6,17 @@
 @include('layouts.nav')
 
 <div id="create-form">
-    <form role="form">
+    <form method="POST" action="/pages/store">
+
+        {{ csrf_field() }}
+
         <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            <label for="title">Page Title</label>
+            <input type="title" class="form-control" id="title" name="title" placeholder="Enter Title">
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputFile">File input</label>
-            <input type="file" id="exampleInputFile">
-            <p class="help-block">Example block-level help text here.</p>
-        </div>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox"> Check me out
-            </label>
+            <label for="body">Page Body</label>
+            <textarea class="form-control" id="body" name="body" rows="3"></textarea>
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
     </form>
