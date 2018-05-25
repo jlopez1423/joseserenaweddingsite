@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
+    public function index() {
+        $pages = Page::all();
+        dd($pages);
+    }
+
     public function create()
     {
         return view('pages.create');

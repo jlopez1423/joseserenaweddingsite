@@ -18,3 +18,4 @@ Route::get('/', function () {
 
 $router->get('/pages/create', 'PagesController@create');
 $router->post('/pages/store', 'PagesController@store');
+$router->get('/pages', 'PagesController@index');
