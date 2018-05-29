@@ -9,7 +9,8 @@ class PagesController extends Controller
 {
     public function index() {
         $pages = Page::all();
-        dd($pages);
+//        dd($pages->toArray());
+        return view('pages.index', ['pages' => $pages->toArray()]);
     }
 
     public function create()
@@ -31,7 +32,7 @@ class PagesController extends Controller
             ]
         );
 
-        return redirect('/');
+        return redirect('/pages');
     }
 
 }
