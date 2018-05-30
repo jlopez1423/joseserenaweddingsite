@@ -1,8 +1,10 @@
 <!doctype html>
 <html lang="en">
-@include('layouts.header')
-
-<body>
-@include('layouts.nav')
-</body>
+    <head>
+        @include('layouts.header')
+    </head>
+    @include('layouts.nav')
+    <body>
+        @yield('content')
+    </body>
 </html>

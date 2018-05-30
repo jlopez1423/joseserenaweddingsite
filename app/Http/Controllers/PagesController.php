@@ -9,7 +9,6 @@ class PagesController extends Controller
 {
     public function index() {
         $pages = Page::all();
-//        dd($pages->toArray());
         return view('pages.index', ['pages' => $pages->toArray()]);
     }
 
