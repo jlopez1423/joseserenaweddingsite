@@ -1,19 +1,15 @@
 <?php
 
-namespace Service;
+namespace App\Library;
 
 use GuzzleHttp;
 
-class Spotify
+
+class SpotifyService
 {
-    public function __construct()
-    {
-
-    }
-
     public function authorize()
     {
-        $myClientId = 'e27895546b3a4fd5a45fae6b46d7029a';
+        $myClientId = getenv('SPOTIFY_CLIENT_ID');
         $scopes = null;
         $callbackUrl = 'http://serenajosewedding.l/callback';
         $client = new GuzzleHttp\Client();
@@ -22,7 +18,7 @@ class Spotify
             'https://accounts.spotify.com/authorize?response_type=code&client_id='
             . $myClientId . ($scopes ? '&scope=' . $scopes : '') . '&redirect_uri=' . $callbackUrl
         );
-        dd($res);
+        return $this;
+//        dd($res);
     }
-
 }
