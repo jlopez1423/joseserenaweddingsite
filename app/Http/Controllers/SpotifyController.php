@@ -14,4 +14,9 @@ class SpotifyController
     public function login() {
         return view('spotify.login');
     }
+
+    public function authorize()
+    {
+        return view('spotify.authorize');
+    }
 }

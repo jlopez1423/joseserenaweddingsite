@@ -21,3 +21,4 @@ $router->post('/pages/store', 'PagesController@store');
 $router->get('/pages', 'PagesController@index');
 $router->post('/callback', 'SpotifyController@callback');
 $router->get('/spotify/login', 'SpotifyController@login');
+$router->get('/spotify/authorize', 'SpotifyController@authorize');

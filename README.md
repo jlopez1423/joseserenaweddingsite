@@ -11,3 +11,5 @@
 
 ###Resources:
 [How to generate api token for Spotify](https://stackoverflow.com/questions/39887342/how-can-i-get-an-access-token-spotify-api)
+
+[Access Token for User](https://gist.github.com/ahallora/4aac6d048742d5de0e65)
